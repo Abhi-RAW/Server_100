@@ -280,7 +280,7 @@ const removeProductFromCart = async (req, res) => {
       .map((product) => {
         // Find product
         if (product.productId.equals(productId)) {
-          // Check quantity greaterthan 1
+          // Check quantity greater than 1
           if (product.quantity > 1) {
             // Spread the array and decrease product quantity
             return { ...product, quantity: product.quantity - 1 };

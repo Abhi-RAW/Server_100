@@ -9,6 +9,8 @@ const { wishlistRouter } = require("./wishlistRoutes.js");
 const { cartRouter } = require("./cartRoutes.js");
 const { orderRouter } = require("./orderRoutes.js");
 const { reviewRouter } = require("./reviewRoutes.js");
+const {paymentRouter}= require("./paymentRoutes.js");
+
 const router = express.Router();
 
 router.use('/user', userRouter);
@@ -20,7 +22,7 @@ router.use('/wishlist', wishlistRouter);
 router.use('/cart', cartRouter);
 router.use('/order', orderRouter);
 router.use('/review', reviewRouter);
-
+router.use('/payment', paymentRouter);
 
 // module.exports = router ;
 module.exports = { apiRouter: router};

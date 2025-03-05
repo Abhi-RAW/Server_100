@@ -863,7 +863,7 @@ const handleReturn = async (req, res) => {
     await order.save();
 
     // Save response to front end
-    res.status(200).json({ message: 'Return ${action}d successfully order' });
+    res.status(200).json({ message: `Return ${action}ed successfully` });
   } catch (error) {
     catchErrorHandler(res, error);
   }
